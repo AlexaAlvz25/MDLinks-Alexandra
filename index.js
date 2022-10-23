@@ -1,5 +1,10 @@
-const verificate = require('./components/verificate');
+const process = require('process');
+const validatePath = require('./components/validatePath')
 
-verificate()
+const mdLinks = (pathProvide) => new Promise((resolve) => {
+  resolve(validatePath(pathProvide))
+})
 
-console.log
+mdLinks(process.argv[2])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err))
