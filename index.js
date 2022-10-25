@@ -1,8 +1,11 @@
 const process = require('process');
 const validatePath = require('./components/validatePath')
+const checkHttp = require('./components/verificateURL');
 
 const mdLinks = (pathProvide) => new Promise((resolve) => {
-  resolve(validatePath(pathProvide))
+  const paths = validatePath(pathProvide);
+  //resolve(paths)
+  resolve(checkHttp(paths))
 })
 
 mdLinks(process.argv[2])
