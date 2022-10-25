@@ -36,7 +36,7 @@ function createArrayObj(array, pathProvide) {
         }
       })
     }
-    obj.file = path.normalize(path.resolve(pathProvide));
+    obj.file = path.normalize(pathProvide);
     arrayObj.push(obj) 
   })
   return arrayObj

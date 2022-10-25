@@ -10,7 +10,7 @@ module.exports = (data) => {
         return {
           ...objLink,
           statusCode : result.status,
-          statusText : result.statusText,
+          statusText : 'Ok',
         }
       })
       .catch( (err) => {
@@ -18,11 +18,12 @@ module.exports = (data) => {
           return {
             ...objLink,
             statusCode : err.response.status,
-            statusText : err.response.statusText,
+            statusText : 'Fail',
           }
         } else if (err.request) {
           return {
             ...objLink,
+            statusCode : '',
             statusText : 'This site can’t be reached - Server IP address could not be found',
           }
         }

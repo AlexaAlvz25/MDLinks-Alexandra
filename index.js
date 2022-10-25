@@ -9,5 +9,13 @@ const mdLinks = (pathProvide) => new Promise((resolve) => {
 })
 
 mdLinks(process.argv[2])
-  .then((result) => console.log(result))
+  .then((result) => {
+    result.forEach((obj) => {
+      process.stdout.write(obj.file + ' ');
+      process.stdout.write(obj.href + ' ');
+      process.stdout.write(obj.statusText + ' ');
+      process.stdout.write(obj.statusCode + ' ');
+      process.stdout.write(obj.text + '\n');
+    });
+  })
   .catch((err) => console.log(err))
