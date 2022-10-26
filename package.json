@@ -6,13 +6,15 @@
   },
   "description": "experimental API for CLI to read files with extension '.md'",
   "main": "index.js",
+  "bin": {
+    "mdLinks": "src/index.js"
+  },
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "jest --coverage",
-    "lint":"eslint",
-    "md-links": "node index.js"
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,8 @@
   "keywords": [
     "javascript",
     "jest",
-    "node"
+    "node",
+    "commander"
   ],
   "author": "Alexandra Alvarez <alexa.alvarezgtz@gmail.com> (https://github.com/AlexaAlvz25)",
   "license": "ISC",
@@ -30,7 +33,9 @@
   },
   "homepage": "https://github.com/AlexaAlvz25/MDLinks-Alexandra#readme",
   "dependencies": {
-    "axios": "^1.1.3"
+    "axios": "^1.1.3",
+    "chalk": "^4.1.2",
+    "commander": "^9.4.1"
   },
   "devDependencies": {
     "eslint": "^8.26.0"

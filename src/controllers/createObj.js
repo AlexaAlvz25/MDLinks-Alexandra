@@ -40,6 +40,6 @@ function createArrayObj(array, pathProvide) {
     arrayObj.push(obj) 
   })
   return arrayObj
-};
+}
 
 module.exports = getURLData;

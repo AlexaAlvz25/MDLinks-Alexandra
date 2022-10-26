@@ -11,12 +11,13 @@ module.exports = (pathProvide) => {
         return 'The current directory is not contain a Markdown File';
       case 1:
         return readFile(filesMD[0]);
-      default:
+      default: {
         let result = [];
         filesMD.forEach((file) => {
           readFile(file).forEach((element) => result.push(element))
         })
       return result;
+      }
     }
   } else {
     return readFile(pathProvide);
