@@ -16,7 +16,7 @@ program
   .description(chalk.black.bold.bgYellow('dentify the Markdown file, parse and print the links you have found'))
   .argument('<path>', chalk.bold('file or directory that includes files -md'))
   .option('--validate', chalk.bold.bgBlueBright('HTTP link validation using Axios'))
-  .option('--stats', chalk.bold.bgBlueBright('bBasic link statistics'))
+  .option('--stats', chalk.bold.bgBlueBright('Basic link statics'))
   .option('--stats --validate', chalk.bold.bgBlueBright('To get statistics that require the results of the validation'))
   .action((path, options) => {
 
